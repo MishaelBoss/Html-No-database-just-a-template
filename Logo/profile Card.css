@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.card::after,
+.card img{
+    border-radius: 50%;
+}
+
+body,
+.card,
+.stats{
+    display: flex;
+}
+
+.card{
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, .5);
+    max-width: 500px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+    margin: 1rem;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.card::before,
+.card::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+.card::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 1px solid #FFF;
+    top: -.7rem;
+    left: -.7red;
+}
+
+.card::after{
+    height: 15rem;
+    width: 15rem;
+    background-color: #8A7F8E;
+    top: -8rem;
+    right: -8rem;
+    box-shadow: 2rem 6rem 0 -3rem #62639B;
+}
+
+.card img{
+    width: 8rem;
+    min-width: 80px;
+    box-shadow: 0 0 0 4px #62639B;
+}
+
+.infos{
+    margin-left: 1.5;
+}
+
+.name{
+    margin-bottom: 1rem;
+}
+
+.name h2{
+    font-size: 1.3rem;
+}
+
+.name h4{
+    font-size: .8rem;
+    color: black;
+}
+
+.text{
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.stats{
+    margin-bottom: 1rem;
+}
+
+.stats li{
+    min-width: 5rem;
+}
+
+.stats li h3{
+    font-size: .99rem;
+}
+
+.stats li h3{
+    font-size: .75rem;
+}
+
+.links button{
+    font-family: 'Poppins', sans-serif;
+    min-width: 120px;
+    padding: .5rem;
+    border: 1px solid #222;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .25s linear;
+}
+
+.links .follow,
+.links .view:hover{
+    background-color: #222;
+    color: #FFF;
+}
+
+.links .view,
+.links .follow:hover{
+    background-color: transparent;
+    color: #222;
+}
